@@ -139,7 +139,7 @@ client.on('message',async message => {  //WESO#0001
   - \`${prefix}clan accept\`: لقبول شخص وجعل الشخص يدخل الكلان ( يتطلب صلاحية الادمن ) ء
   - \`${prefix}clan decline\`: لرفض شخص وعم جعل الشخص يدخل الكلان ( يطلب صلاحية الادمن ) ء
   - \`${prefix}clan room\`: لعمل روم شات او كتابي بأسم الكلان ( صاحب الكلان فقط ) ء`)
-  .setFooter(message.author.username, message.author.avatarURL);  //JL Spark#0001
+  .setFooter(message.author.username, message.author.avatarURL);  //WESO#0001
   message.channel.send(embed);
 }
  
@@ -2004,16 +2004,6 @@ client.on('message' , message => {
   
   let args = message.content.split(" ").slice(1).join(" ");
   
-
-let sWlc = JSON.parse(fs.readFileSync("./setWlc.json", "UTF8"))   
-client.on('message', message => {
-if(message.channel.type === "dm") return;
-if(message.author.bot) return;
-  if(!sWlc[message.guild.id]) sWlc[message.guild.id] = {
-    channel: "welcome"
-}
-
-
   
   
   client.users.get("337647196235366401").send(
